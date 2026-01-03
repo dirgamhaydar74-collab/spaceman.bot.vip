@@ -69,11 +69,21 @@
             box-sizing: border-box; text-align: center; font-size: 1rem; outline: none;
         }
 
+        /* --- PERBAIKAN TOMBOL SIMETRIS --- */
         .btn {
-            display: block; width: 100%; padding: 15px; margin: 10px 0;
-            border: none; border-radius: 10px; font-weight: bold;
-            cursor: pointer; text-transform: uppercase; transition: 0.3s;
+            display: block; 
+            width: 100%; 
+            padding: 15px 0; /* Padding atas-bawah konsisten */
+            margin: 10px 0;
+            border: none; 
+            border-radius: 10px; 
+            font-weight: bold;
+            cursor: pointer; 
+            text-transform: uppercase; 
+            transition: 0.3s;
             text-decoration: none;
+            box-sizing: border-box; /* Memastikan lebar tetap 100% termasuk padding */
+            text-align: center;    /* Memastikan teks DAFTAR AKUN di tengah */
         }
 
         .btn-cyan { background: var(--accent-cyan); color: #000; }
@@ -107,7 +117,7 @@
         <div id="landing-ui">
             <div class="top-banner">AUTO BOT GENERATOR INJECT SERVER</div>
             <div class="game-info">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8iK-X6yYd7fMv4X89e_1PzN_rN0qBvUqVjw&s" alt="Spaceman Logo">
+                <img src="https://i.ibb.co/5Wqh1BG6/Untitled-2.png" alt="Untitled-2" border="0"></a>
                 <div style="font-size: 0.7rem; color: #ddd;">SPACEMAN | PRAGMATIC PLAY</div>
             </div>
 
@@ -207,9 +217,8 @@
                 await new Promise(r => setTimeout(r, 1000));
             }
 
-            // End Sequence
             playSound('sound-success');
-            if (navigator.vibrate) navigator.vibrate([200, 100, 200]); // Getar HP
+            if (navigator.vibrate) navigator.vibrate([200, 100, 200]); 
             
             body.innerHTML += `<div style="color:lime; text-align:center; padding-top:10px; font-weight:bold;">PROSES SELESAI! 🚀</div>`;
             document.getElementById('btn-final').style.display = 'block';
